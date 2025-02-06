@@ -18,5 +18,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('lunar-missions/{mission_id}', LunarMissionController::class . '@deleteOne')->can('manage,mission_id',);
     Route::patch('lunar-missions/{mission_id}', LunarMissionController::class . '@updateOne')->can('manage,mission_id',);
 
+    Route::get('search', LunarMissionController::class . '@search');
+
+
 
 });
