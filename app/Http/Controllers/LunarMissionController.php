@@ -18,7 +18,7 @@ class LunarMissionController extends Controller
         return LunarMissionResource::collection(LunarMission::all());
     }
 
-    public function search()
+    public function search(): AnonymousResourceCollection
     {
         $query = \request()->input('query', '');
 

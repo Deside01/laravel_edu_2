@@ -19,7 +19,7 @@ class RegistrationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'first_name' => 'required|string|max:255',
+            'first_name' => 'required|string|max:255|regex:/^[А-ЯA-Z]/',
             'last_name' => 'required|string|max:255',
             'patronymic' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
